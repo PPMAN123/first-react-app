@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoInputComponent from './components/TodoInputComponent';
+import TodoItems from './components/TodoItems';
+import { useState } from 'react';
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  const addToTodos = value =>{
+    setTodos(currentTodos =>{
+      const newCurrentTodos = Object.assign([], currentTodos)
+      newCurrentTodos.push(value)
+      return newCurrentTodos;
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    [
+      <TodoInputComponent addToTodos={addToTodos}/>,
+      <TodoItems todos={addToTodos}/>
+    ]
   );
 }
 
