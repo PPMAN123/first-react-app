@@ -19,7 +19,7 @@ function App() {
   const removeTodo = id =>{
     setTodos(currentTodos =>{
       const newCurrentTodos = Object.assign([], currentTodos);
-      return newCurrentTodos.filter(todo => todo.id != id);
+      return newCurrentTodos.filter(todo => todo.id !== id);
     })
   }
 
@@ -49,7 +49,7 @@ function App() {
           const {id,doneState} = prevTodo;
           const [todo] = todos.filter(td => td.id === id)
           if(todo && todo.doneState && !doneState){
-            //congrats
+            //congrats message
           }
       })
     }

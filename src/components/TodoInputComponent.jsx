@@ -12,8 +12,10 @@ const StyledInput = styled.input`
     width: 30vw;
     font-size: 24px;
     transition: width 0.5s ease-in-out;
+    border-radius: 5px;
+    padding: 5px;
     &:focus{
-        background-color: lightblue;
+        background-color: none;
         width: 70vw;
     }
 `;

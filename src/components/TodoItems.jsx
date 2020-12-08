@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledTodoItemButton = styled.button`
     border: none;
     outline: none;
-    background; none;
+    background: none;
     margin: 5px;
     font-size: 20px;
     &:hover{
